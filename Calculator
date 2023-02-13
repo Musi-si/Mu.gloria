@@ -9,8 +9,8 @@ let n = firstArray.length;
 let m = secondArray.length;
 let sum = firstArray[0];
 let product = secondArray[0];
-for ( i = 0; i < n; i + 2 ){
-    for ( j = 0; j < m; j + 2 ){
+for ( i = 0; i < n; i += 2 ){
+    for ( j = 0; j < m; j += 2 ){
         sum = sum + firstArray[i + 1];
         product = product * secondArray[j + 1];
     }
