@@ -1,0 +1,29 @@
+const express = require ( 'express' );
+const app = express ();
+const port = 3000;
+
+app.get( '/', ( req, res ) => {
+const firstArray = req.query.firstArray.split;
+const secondArray = req.query.secondArray.split;
+let n = firstArray.length;
+let m = secondArray.length;
+let sum = firstArray[0];
+let product = secondArray[0];
+for ( i = 0; i < n; i + 2 ){
+    for ( j = 0; j < m; j + 2 ){
+        sum = sum + firstArray[i + 1];
+        product = product * secondArray[j + 1];
+    }
+}
+res.send( 'The sum of the list is ${sum} and the product of the arrays is ${product}' );
+} );
+
+app.listen ( port, () => {
+console.log( 'API for addition is at http://localhost:${port}' ),
+console.log( 'API for multiplication is at http://localhost:${port}' )
+} );
+
+
+
+
+
